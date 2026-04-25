@@ -4,6 +4,8 @@
 
 A transparent fullscreen overlay for GNOME Wayland that recognises handwriting and types the result into any application. Draw with a stylus or finger, wait for the countdown, and the recognised text appears in whatever window had focus before you started drawing.
 
+https://github.com/user-attachments/assets/ffdfa916-d539-4b12-9a92-74124a2d3396
+
 ---
 
 ## How it works
