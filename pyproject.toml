@@ -1,0 +1,58 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.backends.legacy:build"
+
+[project]
+name = "gnome-handwriting-overlay"
+version = "0.2.3-alpha"
+description = "Transparent GNOME Wayland overlay for handwriting recognition and annotation"
+requires-python = ">=3.10"
+license = { text = "CC0-1.0" }
+authors = [{ name = "greybent", email = "greybent@users.noreply.github.com" }]
+
+# Runtime dependencies (PyGObject and Cairo are system packages — listed for documentation)
+dependencies = [
+    "PyYAML>=6.0",
+    # System packages required (not installable via pip):
+    #   python3-gi  python3-gi-cairo  gir1.2-gtk-4.0  gir1.2-adw-1
+    # Optional for OCR:
+    #   pytesseract>=0.3.10
+    #   Pillow>=10.0
+]
+
+[project.optional-dependencies]
+ocr = [
+    "pytesseract>=0.3.10",
+    "Pillow>=10.0",
+]
+dev = [
+    "pytest>=7.4",
+    "pytest-cov>=4.1",
+    "ruff>=0.1",
+    "mypy>=1.6",
+]
+
+[project.scripts]
+gnome-overlay = "main:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["core*", "ui*", "input*", "recognition*", "utils*"]
+
+# ── Ruff (linter) ───────────────────────────────────────────────────────────
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+select = ["E", "F", "W", "I", "UP", "B", "C4"]
+ignore = ["E501"]  # line length handled separately
+
+# ── Mypy ────────────────────────────────────────────────────────────────────
+[tool.mypy]
+python_version = "3.10"
+warn_unused_configs = true
+ignore_missing_imports = true   # gi stubs not available
+
+# ── Pytest ──────────────────────────────────────────────────────────────────
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-v --tb=short"

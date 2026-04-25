@@ -1,0 +1,50 @@
+window:
+  opacity: 0.0
+  z_layer: overlay
+input:
+  pressure_curve:
+  - - 0.0
+    - 0.0
+  - - 0.5
+    - 0.1
+  - - 0.85
+    - 0.7
+  - - 1.0
+    - 1.0
+  min_thickness: 1.0
+  max_thickness: 12.0
+  touch_enabled: true
+  portrait_rotation: ccw
+recognition:
+  timeout_seconds: 1.5
+  engine: google
+  languages:
+  - en
+  - de
+  active_language: en
+  line_merge_factor: 0.6
+  word_gap_factor: 0.8
+annotation:
+  default_color: '#FFFFFF'
+  glow_enabled: false
+  glow_radius: 6.0
+  glow_color: auto
+typing:
+  enabled: true
+  strategy: auto
+  focus_release_delay_ms: 150
+  press_enter: false
+  clear_canvas_after_inject: true
+  quit_after_inject: true
+erase:
+  enabled: true
+  min_reversals: 4
+  min_width: 60.0
+  hit_threshold: 15.0
+shortcuts:
+  toggle_mode: <Shift>A
+  clear_canvas: <Shift>c
+  quit: <Shift>q
+myscript:
+  application_key: <myscript-app-key>
+  hmac_key: <myscript-hmac-key>
