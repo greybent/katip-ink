@@ -8,7 +8,7 @@ version = "0.2.3-alpha"
 description = "Transparent GNOME Wayland overlay for handwriting recognition and annotation"
 requires-python = ">=3.10"
 license = { text = "CC0-1.0" }
-authors = [{ name = "Your Name", email = "you@example.com" }]
+authors = [{ name = "greybent", email = "greybent@users.noreply.github.com" }]
 
 # Runtime dependencies (PyGObject and Cairo are system packages — listed for documentation)
 dependencies = [
