@@ -6,7 +6,7 @@ A transparent fullscreen overlay for GNOME Wayland that recognises handwriting a
 
 https://github.com/user-attachments/assets/ffdfa916-d539-4b12-9a92-74124a2d3396
 
-<video src="https://github.com/greybent/katip-ink/releases/download/v0.2.3-alpha/katip-ink-showcase-02.mp4" controls width="100%"></video>
+https://github.com/user-attachments/assets/b3bda95d-c2c0-4e9f-a76d-4fac0cf73c4f
 
 ---
 
